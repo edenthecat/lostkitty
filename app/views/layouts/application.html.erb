@@ -9,9 +9,11 @@
   </head>
 
   <body>
-    <ul classz="nav">
+    <ul class="nav">
       <%= link_to "New Pet", new_pet_path %>
     </ul>
-    <%= yield %>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>
