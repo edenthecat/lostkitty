@@ -11,6 +11,10 @@ class PetsController < ApplicationController
     @pet = Pet.new()
   end
 
+  def edit
+    @pet = Pet.find(params[:id])
+  end
+
   def create
     @pet = Pet.create(pet_params)
     redirect_to pet_path(@pet)
