@@ -1,7 +1,9 @@
-
+<div class="row">
   <h1><%= @pet.name %></h1>
   <p><%= @pet.address %></p>
   <p><%= @pet.category %></p>
-
-  <%= link_to "Edit", edit_pet_path(@pet) %>
-  <%= link_to "Back", pets_path %>
+<ul class="list-inline">
+  <li><%= link_to "Edit", edit_pet_path(@pet) %></li>
+  <li><%= link_to "Back", pets_path %></li>
+  </ul>
+</div>
