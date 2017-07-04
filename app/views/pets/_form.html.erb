@@ -1,23 +1,6 @@
-<%= form_for @pet do |f| %>
-  <%= f.label :name, "Enter a name" %>
-  <%= f.text_field :name %>
-  <%= f.label :address, "Enter an address" %>
-  <%= f.text_field :address %>
-  <%= f.label :category, "Enter a category" %>
-  <%= f.text_field :category %>
-  <%= f.submit %>
+<%= simple_form_for @pet do |f| %>
+  <%= f.input :name, input_html: { placeholder: "Garfield" } %>
+  <%= f.input :category, as: :select, collection: Pet::CATEGORIES, include_blank:  "Select a category" %>
+  <%= f.input :address %>
+  <%= f.submit class: "btn btn-primary" %>
 <% end %>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
