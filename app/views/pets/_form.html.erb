@@ -2,5 +2,6 @@
   <%= f.input :name, input_html: { placeholder: "Garfield" } %>
   <%= f.input :category, as: :select, collection: Pet::CATEGORIES, include_blank:  "Select a category" %>
   <%= f.input :address %>
+  <%= f.input :found_on, as: :string, input_html: {class: "datepicker"} %>
   <%= f.submit class: "btn btn-primary" %>
 <% end %>
