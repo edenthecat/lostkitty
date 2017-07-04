@@ -2,4 +2,5 @@
   <h1><%= link_to pet.name, pet_path(pet) %></h1>
   <p><%= pet.address %></p>
   <p><%= pet.category %></p>
+  <%= link_to "Delete", pet_path(pet),method: :delete %>
 <% end %>
